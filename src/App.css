@@ -58,19 +58,18 @@ form {
   border-radius: 10px;
 }
 
-form label {
+span {
   font-size: 14px;
   color: darkgray;
   cursor: pointer;
 }
-
-form label,
-form input {
+label,
+input {
   float: left;
   clear: both;
 }
 
-form input {
+input {
   margin: 15px 0;
   padding: 15px 10px;
   width: 100%;
@@ -88,28 +87,30 @@ form input {
   transition: 0.2s ease all;
 }
 
-form input[type=text]:focus,
-form input[type="password"]:focus {
+input[type=text]:focus,
+input[type="password"]:focus {
   border-color: cornflowerblue;
 }
-
-input[type=submit] {
+button {
   padding: 15px 50px;
   width: auto;
+  margin: 5px;
   background: #1abc9c;
   border: none;
   color: white;
   cursor: pointer;
   display: inline-block;
-  float: right;
-  clear: right;
-  -webkit-transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -ms-transition: 0.2s ease all;
-  -o-transition: 0.2s ease all;
+  /* float: right; */
+  /* clear: right; */
   transition: 0.2s ease all;
 }
-
+.a1{
+  align-items: center;
+    text-align: center;
+    left: 50%;
+    position: relative;
+    display: inline-flex;
+}
 input[type=submit]:hover {
   opacity: 0.8;
 }

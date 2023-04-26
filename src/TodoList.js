@@ -38,39 +38,39 @@ function TodoList() {
     }
 
   return (
-    <div>
-      <h1 id="logo">Todo List</h1>
-{
-  DisplayTodo.map((todos) =>{
-    console.log(todos)
-  
-        return (
-          <>
-          
-              <form action="">
-              <input
-                type="checkbox"
-                checked={todos.completed}
-                onChange={() => handleToggle()}
-              />
-              <span>{todos}</span>
+   
+      <div>
+        <h1 id="logo">Todo List</h1>
+        {DisplayTodo.map((todos) => {
+          console.log(todos);
+
+          return (
+            <>
+              <div className='a1'>
+                <input
+                  type="checkbox"
+                  checked={todos.completed}
+                  onChange={() => handleToggle()}
+                />
+                <span>{todos}</span>
+              </div>
 
               <br />
-           
-            </form>
-          </>
-        );}
-  
-    )
+            </>
+          );
+        })}
 
-}
-      <input value={inputValue} onChange={handleInputChange}  placeholder='add todo'></input><br/>
-      <button onClick={handleAddTodo} >Add</button>
-      <button onClick={handleDeleteTodo} >Delete Todos</button>
-     
+        <input
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="add todo"
+        ></input>
+        <br />
 
-     
-    </div>
+        <button onClick={handleAddTodo}>Add</button>
+        <button onClick={handleDeleteTodo}>Delete Todos</button>
+      </div>
+   
   );
 }
 
